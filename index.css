@@ -16,7 +16,12 @@ height: 80px;
 body{
     background-color: #F1F6F9;
 }
+#WebCam{
+    position: absolute;
+    z-index: 1400;
+}
 .bod_camera{
+    z-index: 900;
     position: absolute;
     top: 40%;
     left: 50%;
@@ -28,4 +33,7 @@ body{
     width: 1200px;
     position: absolute;
     background-color: white;
+}
+#canvas{
+    position: absolute;
 }
