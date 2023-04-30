@@ -2,13 +2,11 @@
     height: 100%;
     background-color: #9BA4B5;
 }
-.nav .naav{
+/* .nav .naav{
 width: 100%;
 height: 80px;
-}
-.naav{
-    background-color: #9BA4B5;
-}
+} */
+
 .naav a{
     font-size: 30px;
     margin-left: 20px;
@@ -16,13 +14,17 @@ height: 80px;
 body{
     background-color: #F1F6F9;
 }
-#WebCam{
-    position: absolute;
-    z-index: 1;
+#webCam{
+    height: 600px;
+    width: 1200px;
+    margin: 20px;
+    
+    /* z-index: 1; */
 }
 .bod_camera{
-    position: relative;
+    /* position: relative; */
     top: 40%;
+    /* padding: 20px 0px; */
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 13px;
@@ -31,8 +33,4 @@ body{
     width: 1200px;
     position: absolute;
     background-color: white;
-}
-#canvas{
-    position: absolute;
-    z-index: 0;
 }

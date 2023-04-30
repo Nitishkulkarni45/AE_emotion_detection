@@ -1,4 +1,4 @@
-const WebCamElement = document.getElementById("WebCam");
-const CanvasElement = document.getElementById("canvas");
-const webcam = new Webcam(WebCamElement,"user",CanvasElement);
+const webCamElement = document.getElementById("webCam");
+const canvasElement = document.getElementById("canvas");
+const webcam = new Webcam(webCamElement,"user",canvasElement);
 webcam.start();
