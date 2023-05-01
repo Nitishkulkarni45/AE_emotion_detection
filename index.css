@@ -34,8 +34,24 @@ body{
     width: 100%;
 }
 .dis{
-    border: 2px solid red;
+    margin-top: 20px;
+    /* align-items: center; */
+    /* border: 2px solid red; */
+    border-radius: 13px;
     background-color: white;
+    margin-left: 330px;
     height: 300px;
     width: 200px;
+}
+.display_song{
+    display: flex;
+    justify-content: space-evenly;
+    /* margin-right: 30px; */
+}
+.but{
+    margin-right: 50px;
+    width: 150px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
 }
