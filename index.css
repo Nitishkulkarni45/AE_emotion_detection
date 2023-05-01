@@ -34,12 +34,14 @@ body{
     width: 100%;
 }
 .dis{
+    left: 33.25%;
     margin-top: 20px;
     /* align-items: center; */
     /* border: 2px solid red; */
     border-radius: 13px;
     background-color: white;
-    margin-left: 445px;
+    /* margin-left: 445px; */
+    position: absolute;
     height: 250px;
     width: 250px;
 }
@@ -49,9 +51,24 @@ body{
     /* margin-right: 30px; */
 }
 .but{
-    margin-right: 490px;
+    top: 79%;
+    left: 57%;
+    position: absolute;
+    right: 10%;
+    /* margin-right: 490px; */
     width: 150px;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
-    display: flex;
+    /* display: flex; */
+}
+.btt{
+    background-color: #9BA4B5;
+    height: 50px;
+    margin-bottom: 20px;
+    border: none;
+    width: 200px;
+}
+.but :hover{
+    background-color: #F1F6F9 !important;
+    color: black;
 }
