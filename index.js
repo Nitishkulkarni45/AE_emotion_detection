@@ -24,4 +24,9 @@ function onPlayerStateChange(event) {
     // Do something when the video changes state (e.g. finished playing)
 }
 
+function playSong(videoId) {
+    var player = document.getElementById('player');
+    player.src = 'https://www.youtube.com/embed/' + videoId;
+  }
+  
 {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/ZJdLJf4ZW-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
