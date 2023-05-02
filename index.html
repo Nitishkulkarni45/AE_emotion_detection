@@ -12,6 +12,8 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./index.css">
   <script type="text/javascript" src="https://unpkg.com/webcam-easy@1.0.5/dist/webcam-easy.min.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+
   <title>Emotion Detector</title>
 </head>
 
@@ -57,7 +59,8 @@
         </video>
       </div>
       <div class="display_song">
-        <div class="dis">
+        <div class="dis" id="player">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/ZJdLJf4ZW-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         <div class="but">
           <button type="button" class="btn btn-primary btt">Start</button>
