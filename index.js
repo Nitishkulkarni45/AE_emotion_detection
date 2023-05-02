@@ -1,9 +1,39 @@
-const webCamElement = document.getElementById("webCam");
-const canvasElement = document.getElementById("canvas");
-const webcam = new Webcam(webCamElement, "user", canvasElement);
-webcam.start();
-
-
+// const webCamElement = document.getElementById("webCam");
+// const canvasElement = document.getElementById("canvas");
+// const webcam = new Webcam(webCamElement, "user", canvasElement);
+// webcam.start();
+// Load the Keras model in JSON format
+tf.loadLayersModel("model100d.json").then(model => {
+    // Create a new instance of the webcam-easy library
+    const webcam = new WebcamEasy({
+      videoElement: document.getElementById('video'),
+      // Don't need to pass in the canvas element
+    });
+  
+    // Start the webcam and wait for it to be ready
+    webcam.start().then(() => {
+      // Start capturing frames from the webcam
+      requestAnimationFrame(function captureFrame() {
+        // Get the current frame from the webcam
+        const image = webcam.capture();
+  
+        // Preprocess the input image to conform to the input shape of the Keras model
+        const input = tf.browser.fromPixels(image).expandDims();
+  
+        // Make a prediction on the input image using the Keras model
+        // const output = model.predict(input);
+        const predictions = model.predict(input);
+        const emotion_label = predictions.argMax(1).dataSync()[0];
+        console.log(emotion_label);
+        // Do something with the output (e.g. display it on the page)
+        
+  
+        // Release the current frame and request the next one
+        image.release();
+        requestAnimationFrame(captureFrame);
+      });
+    });
+  });
 var player;
 let searchQuery = 'jingichakka';
 let url = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&key=AIzaSyDcOpYZxYuxqFJqAuC4vxLV9rQJHwVzudc&q=' + searchQuery;
