@@ -1,4 +1,4 @@
-// const webCamElement = document.getElementById("webCam");
+
 // const modell  = require('./model100d.json');
 // const canvasElement = document.getElementById("canvas");
 // const webcam = new Webcam(webCamElement, "user", canvasElement);
@@ -354,16 +354,17 @@ const modell = {
   "keras_version": "2.12.0",
   "backend": "tensorflow"
 }
-
 console.log(modell);
 (async function() {
-  const response = await modell;
+  const response = modell;
   console.log('model', response)
   const modelData = response;
-  const model = await tf.loadGraphModel(modelData);
-  const webcam = new WebcamEasy({
-    videoElement: document.getElementById('video'),
-  });
+  const model =  tf.models.modelFromJSON(modelData);
+//   const model = await tf.loadLayersModel(modelData);
+//const webCam = document.getElementById("webCam");
+const webCamElement = document.getElementById("webCam");
+const canvasElement = document.getElementById("canvas");
+const webcam = new Webcam(webCamElement,"user",canvasElement);
   // rest of your code
 //   var data;
 // fetch("model100d.json")
